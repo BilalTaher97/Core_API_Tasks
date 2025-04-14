@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "FsSy5XWFQ43TbjXy4PEXSxRNFvBtOUHbGgDM9Crzc3M=",
+  "Hash": "4OIjZS4hWQr7bCjjv1uDNsUWkNM0NLl+p+Ml7qmCFFU=",
   "Source": "Angular_and_Core_API.Server",
   "BasePath": "_content/Angular_and_Core_API.Server",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "C:\\Users\\Orange\\source\\repos\\Angular_and_Core_API\\angular_and_core_api.client\\angular_and_core_api.client.esproj",
+      "Identity": "C:\\Users\\Orange\\Desktop\\Core_API_Tasks\\Angular_and_Core_API\\angular_and_core_api.client\\angular_and_core_api.client.esproj",
       "Version": 2,
       "Source": "angular_and_core_api.client",
       "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",

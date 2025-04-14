@@ -87,6 +87,7 @@ namespace Angular_and_Core_API.Server.DataService
 
         public bool Add_Category(CreateCategoryDTO AddCat)
         {
+            Console.WriteLine($"Name: {AddCat.CategoryName}, Desc: {AddCat.CategoryDesc}");
             var Categor = new Category
             {
                 CategoryName = AddCat.CategoryName,
@@ -140,5 +141,56 @@ namespace Angular_and_Core_API.Server.DataService
 
         }
 
+
+
+        public bool Add_Product(CreateProductDTO Addpro)
+        {
+
+            var Product = new Product
+            {
+                ProductName = Addpro.productName,
+                ProductDesc = Addpro.productDesc,
+            };
+
+            _dbContext.Add(Product);
+            _dbContext.SaveChanges();
+
+            return true;
+
+        }
+
+        public bool Edit_Product(CreateProductDTO Editpro,int id)
+        {
+
+            var Prod = _dbContext.Products.Find(id);
+
+            if(Prod == null)
+            {
+                return false ;
+            }
+
+            Prod.ProductName = Editpro.productName;
+            Prod.ProductDesc = Editpro.productDesc;
+
+            _dbContext.SaveChanges();
+            return true;
+
+        }
+
+
+        public bool Delete_Product(int id)
+        {
+
+            var Product = _dbContext.Products.Find(id);
+
+            if (Product == null)
+            {
+                return false ;
+            }
+
+            _dbContext.Remove(Product);
+            _dbContext.SaveChanges();
+            return true;
+        }
     }
 }

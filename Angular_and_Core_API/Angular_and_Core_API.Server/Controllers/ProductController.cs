@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Angular_and_Core_API.Server.DTO;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Angular_and_Core_API.Server.Controllers
 {
@@ -53,7 +54,45 @@ namespace Angular_and_Core_API.Server.Controllers
 
         }
 
+        [HttpPost("AddProduct")]
+        public IActionResult AddNewProduct([FromBody] CreateProductDTO NewProduct)
+        {
+            if (NewProduct == null)
+            {
+                return BadRequest();
+            }
+
+            _dataService.Add_Product(NewProduct);
+            return Ok();
+
+        }
 
 
+        [HttpPut("EditProduct/{id}")]
+        public IActionResult EditProduct([FromBody] CreateProductDTO NewProduct,int id)
+        {
+            if (NewProduct == null)
+            {
+                return BadRequest();
+            }
+
+            _dataService.Edit_Product(NewProduct,id);
+            return Ok();
+
+        }
+
+        [HttpDelete("DeleteProduct/{id}")]
+        public IActionResult DeleteProduct(int id)
+        {
+
+            if(_dataService.Delete_Product(id))
+            {
+                return Ok();
+            }
+
+            return BadRequest();
+
+
+        }
     }
 }

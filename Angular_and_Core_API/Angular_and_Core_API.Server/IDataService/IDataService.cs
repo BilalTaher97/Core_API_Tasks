@@ -14,9 +14,11 @@ namespace Angular_and_Core_API.Server.IDataService
         public List<Product> GetAllProduct();
         public bool DeleteProductByID(int id);
         public Product GetProductByID(int id);
-
         public bool Add_Category(CreateCategoryDTO AddCat);
         public bool Update_Category(int id, CreateCategoryDTO NewCategory);
+        public bool Add_Product(CreateProductDTO Addpro);
+        public bool Edit_Product(CreateProductDTO Editpro, int id);
+        public bool Delete_Product(int id);
 
     }
 }

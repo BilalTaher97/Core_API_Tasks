@@ -32,7 +32,7 @@ namespace Angular_and_Core_API.Server.Controllers
         }
 
         [HttpPost("AddCategory")]
-        public IActionResult AddNewCategory([FromForm]CreateCategoryDTO NewCategory)
+        public IActionResult AddNewCategory([FromBody]CreateCategoryDTO NewCategory)
         {
             if(NewCategory == null)
             {
@@ -40,13 +40,13 @@ namespace Angular_and_Core_API.Server.Controllers
             }
 
             _dataService.Add_Category(NewCategory);
-            return Ok("Add data is successfully");
+            return Ok();
 
         }
 
 
         [HttpPut("Update/{id}")]
-        public IActionResult Update(int id,[FromForm] CreateCategoryDTO NewCategory)
+        public IActionResult Update(int id,[FromForm]CreateCategoryDTO NewCategory)
         {
             if (NewCategory == null)
             {
@@ -55,7 +55,7 @@ namespace Angular_and_Core_API.Server.Controllers
 
             if(_dataService.Update_Category(id, NewCategory))
             {
-                return Ok("Update Data is Successfully");
+                return Ok();
             }
            
             return BadRequest();

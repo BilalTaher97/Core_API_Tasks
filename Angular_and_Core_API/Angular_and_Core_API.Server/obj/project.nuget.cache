@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O+8A6RoAyXA=",
+  "dgSpecHash": "fMibY3qmtxQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Orange\\source\\repos\\Angular_and_Core_API\\Angular_and_Core_API.Server\\Angular_and_Core_API.Server.csproj",
+  "projectFilePath": "C:\\Users\\Orange\\Desktop\\Core_API_Tasks\\Angular_and_Core_API\\Angular_and_Core_API.Server\\Angular_and_Core_API.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Orange\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Orange\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
